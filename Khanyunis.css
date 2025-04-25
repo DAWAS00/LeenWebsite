@@ -1,0 +1,121 @@
+header {
+  background-color:rgb(103, 152, 84);
+  position: fixed; 
+  width: 100%; 
+  top: 0;      
+  left: 0;  
+  z-index: 1000; 
+  padding: 10px 0;
+  max-width: 10000px;
+}
+
+.logo h2 {
+  text-align: center;
+  color: #14340b; 
+  margin: 0;
+  padding: 10px 0;
+}
+
+.image-container {
+  width: 300px;  /* Increased from 100px */
+  margin-left: 20px;
+  height: auto;
+  padding-top: 100px;  /* Increased to account for fixed header */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;  /* Ensures proper image rendering */
+  max-width: 100%;
+}
+nav {
+  
+  margin: 0 auto;
+  
+}
+.nav-links {
+  list-style: none;  
+  display: flex;  
+  align-items: center; 
+  justify-content: space-between;
+  padding: 0; 
+  margin: 0; 
+  gap: 2rem;
+  padding-bottom: 10px;  
+}
+
+.nav-links li a {
+  text-decoration: none; 
+  color: rgb(209, 209, 187) ; 
+  font-weight: 500 ; 
+  padding: 0.5rem 1rem ;
+   
+}
+.nav-links a:hover {
+  color: rgb(5, 73, 36);
+  text-decoration: underline;
+}
+.nav-links li a.active {
+  font-weight: 600;  
+}
+
+   .content-center{
+    text-align:center;
+    background-color: rgb(218, 233, 212);
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0% ; 
+    
+   }
+    .background-color {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+   .image-container{
+    width: 100px;
+    margin-left: 20px;
+    height: auto;
+    padding-top:60px;
+  }
+
+   .image-container img{
+    width: 100%;
+    height: auto;}
+    .table{
+      width: 80%;
+      text-align:center;
+      font-size: 18px;
+      margin: 25px;
+      background-color: rgb(218, 233, 212);
+     }
+     .table caption{
+      font-style: normal;
+      color: #4a6741;
+     }
+     .table td{
+      color:olive;
+      border: none;
+      padding: 12px 15px;
+   }
+   .table tr{
+      background-color: rgb(217, 226, 213);
+   }
+   .table h4{
+    color: olive;
+   }
+   .table h2{
+    color:#4a6741;
+   }
+   .table img{
+    width: 200px;
+    margin-left: 20px;
+   }
+  
+  
+    
+     
+   

@@ -1,0 +1,89 @@
+header {
+    background-color:rgb(103, 152, 84);
+    position: fixed; 
+    width: 100%; 
+    top: 0;      
+    left: 0;  
+    z-index: 1000; 
+    padding-bottom: 0%;
+    
+  }
+  .logo h2 {
+    text-align: center;
+    color: #14340b; 
+    
+  }
+  nav {
+    max-width: 300px;
+    margin: 0 auto;
+    
+  }
+  .nav-links {
+    list-style: none;  
+    display: flex;  
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0; 
+    margin: 0; 
+    gap: 2rem;   
+  }
+  
+  .nav-links li a {
+    text-decoration: none; 
+    color: rgb(209, 209, 187) ; 
+    font-weight: 500 ; 
+    padding: 0.5rem 1rem ;
+     
+  }
+  .nav-links a:hover {
+    color: rgb(5, 73, 36);
+    text-decoration: underline;
+  }
+  .nav-links li a.active {
+    font-weight: 600;  
+  }
+   .content-center{
+    text-align:center;
+    background-color: rgb(218, 233, 212);
+    width: 90%;
+    padding: 1rem;
+    margin: 0%
+   }
+    .background-color {
+    display: flex;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+   .image-container{
+    width: 100px;
+    margin-left: 20px;
+    height: auto;}
+   .image-container img{
+    width: 100%;
+    height: auto;}
+    .table{
+        width: 100%;
+        font-size: 18px;
+        margin: 20px;
+        background-color: rgb(218, 233, 212);
+       }
+    .table tr{
+        background-color: rgb(217, 226, 213);
+        
+     }
+     .table img{
+      width: 500px;
+      margin-left: 20px;
+     }
+.content-center table td {
+    padding: 0 30px;  /* Adds horizontal spacing between table cells */
+    vertical-align: top;  /* Aligns content to the top */
+}
+
+.content-center table img {
+    margin-right: 20px;  /* Additional spacing specifically for the image */
+}
+    
+    
+     
