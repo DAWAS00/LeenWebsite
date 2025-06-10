@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Rafah.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <style>
+        form {
+            background-color: rgb(218, 233, 212);
+        }
+
+        h2 {
+            color: #4a6741;
+        }
+
+        p a {
+            color: rgb(39, 130, 39);
+            text-decoration: none;
+            text-align: center;
+            margin: 20px;
+            background-color: rgb(174, 210, 176);
+            border-radius: 20px 10px 20px;
+        }
+
+        p a:hover {
+            color: rgb(17, 87, 17);
+        }
+    </style>
+</head>
+
+<header>
+    <div class="logo">
+        <h2>Zaytoon</h2>
+    </div>
+     <P id="dA" style="background-color: #c8d5c4;width: 30%; color: #4a6741;"></P>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-links"><a class="nav-link" href="Gaza.html">Gaza</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Jabalia.html">Jabalia</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Khanyunis.html">Khanyunis</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Deiral_Balah.html">Deiral_Balah</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Al-Nasr.html">Al-Nasr</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Rafah.html">Rafah</a></li>
+                    <li class="nav-links"><a class="nav-link" href="AL-Zaytoun.html">Al-Zaytoun</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Sabra.html">Sabra</a></li>
+                </ul>
+            </div>
+        </div>
+         
+    </nav>
+  
+</header>
+
+<body style="background-color:rgb(237, 247, 234);">
+<div class="image-container">
+    <img src="gaza.png" alt=" Gaza Strip">
+</div>
+
+<div class="container" style="width: 50% ;height: 30%; ">
+    <h2 class="mb-4">Child Mental Health Form</h2>
+
+    <form class="needs-validation" onsubmit="return yaz()" novalidate>
+        <div class="mb-3" id="mess">
+            <label for="firstName" class="form-label">- First Name:</label>
+            <input type="text" class="form-control" id="firstName" required
+                   style="background-color: #c8d5c4; width: 40%;">
+            <div class="invalid-feedback">Please enter your first name.</div>
+            <div id="firstNameError" style="color: red;"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="lastName" class="form-label">- Last Name:</label>
+            <input type="text" class="form-control" id="lastName" required
+                   style="background-color: #c8d5c4; width: 40%;">
+            <div class="invalid-feedback">Please enter your last name.</div>
+            <div id="lastNameError" style="color: red;"></div>
+        </div>
+
+        <h5 class="mt-4">- What is the child experiencing? (check all that apply):</h5>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="panic">
+            <label class="form-check-label" for="panic">Panic attack</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="breathing">
+            <label class="form-check-label" for="breathing">Trouble breathing</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="crying">
+            <label class="form-check-label" for="crying">Crying excessively</label>
+        </div>
+        <br><br>
+
+        <div class="mb-3">
+            <label for="startDate" class="form-label">- When did it start?</label>
+            <input type="date" class="form-control" id="startDate" required
+                   style="background-color: #c8d5c4; width: 40%;">
+            <div class="invalid-feedback">Please select a start date.</div>
+            <div id="startDateError" style="color: red;"></div>
+        </div>
+
+        <h5 class="mt-4">- Do you want to talk to a mental health specialist?(Optional)</h5>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="whatsapp">
+            <label class="form-check-label" for="whatsapp">WhatsApp</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="call">
+            <label class="form-check-label" for="call">Phone Call</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="emailOption">
+            <label class="form-check-label" for="emailOption">Email</label>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="phone" class="form-label">- Your Phone Number:</label>
+            <input type="number" class="form-control" id="phone" required
+                   style="background-color: #c8d5c4; width: 40%;">
+            <div class="invalid-feedback">Please enter your phone number.</div>
+            <div id="phoneError" style="color: red;"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">- Email:</label>
+            <input type="email" class="form-control" id="email"
+                   style="background-color: #c8d5c4; width: 40%;">
+                    <div id="emailError" style="color: red;"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="notes" class="form-label">- Additional notes or questions:</label>
+            <textarea class="form-control" id="notes" rows="3"
+                      style="background-color: #c8d5c4; width: 50%;">Your Notes Here......</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success" style="border: #4a6741;">Submit</button>
+    </form>
+</div>
+
+<div class="card mb-3" style="max-width: 90%; margin: 40px;">
+    <div class="row g-0" style="background-color: rgb(218, 231, 218);">
+        <div class="col-md-7">
+            <img src="Rafah2.jpg" class="img-fluid rounded-start" alt="..." style="height: 100%;">
+        </div>
+        <div class="col-md-5">
+            <div class="card-body">
+               <h5 class="card-title"><strong style="font-style: normal;color:#4a6741;
+                text-decoration: underline;"><h2>-Our Information</h2></strong> </h5>
+                <p class="card-text" style="font-style: oblique;color: olive;">
+                <h2>Address:</h2>
+                Gaza|Al Thawra st. Bldg.1948 <br>
+                Gaza, Palestine
+                </p>
+                <h2>Call Us On :</h2>
+                <p>
+                    Jordan: +962 791094857 <br>
+                    Palestine: +972 17989645
+                </p>
+                <h2>Email Us :</h2>
+                <p><a href="mailto:leen.rabah@icloud.com">Zaytoon</a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    D=new Date();
+    document.getElementById("dA").innerHTML=D;
+    document.write(date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear()); 
+    document.write(""+(date.getHours())+":"+date.getMinutes()+":"+date.getSeconds());
+    function yaz() {
+        var name = document.getElementById("firstName").value;
+        var name2 = document.getElementById("lastName").value;
+        var name4 = document.getElementById("startDate").value;
+        var name5 = document.getElementById("phone").value;
+        var name6 = document.getElementById("email").value;
+
+        var isValid = true;
+
+        if (name === "") {
+            document.getElementById("firstNameError").innerHTML = "Please enter your first name";
+            isValid = false;
+        } else {
+            document.getElementById("firstNameError").innerHTML = "";
+        }
+
+        if (name2 === "") {
+            document.getElementById("lastNameError").innerHTML = "Please enter your last name";
+            isValid = false;
+        } else {
+            document.getElementById("lastNameError").innerHTML = "";
+        }
+
+        if (name4 === "") {
+            document.getElementById("startDateError").innerHTML = "Please enter start date";
+            isValid = false;
+        } else {
+            document.getElementById("startDateError").innerHTML = "";
+        }
+
+        if (name5 === "") {
+            document.getElementById("phoneError").innerHTML = "Please enter your phone number";
+            isValid = false;
+        } else {
+            document.getElementById("phoneError").innerHTML = "";
+        }
+         if (name6 === "") {
+            document.getElementById("emailError").innerHTML = "Please enter your email";
+            isValid = false;
+        } else {
+            document.getElementById("emailError").innerHTML = "";
+        }
+
+        return isValid;
+    }
+    
+</script>
+
+</body>
+</html>

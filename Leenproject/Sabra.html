@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+   <link rel="stylesheet" href="Sabra.css">
+</head>
+
+<header>
+    <div class="logo">
+        <h2>Zaytoon</h2>
+    </div>
+    <p id="dA" style="background-color: #c8d5c4;width: 30%; color: #4a6741;"></p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-links"><a class="nav-link" href="Gaza.html">Gaza</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Jabalia.html">Jabalia</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Khanyunis.html">Khanyunis</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Deiral_Balah.html">Deiral_Balah</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Al-Nasr.html">Al-Nasr</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Rafah.html">Rafah</a></li>
+                    <li class="nav-links"><a class="nav-link" href="AL-Zaytoun.html">Al-Zaytoun</a></li>
+                    <li class="nav-links"><a class="nav-link" href="Sabra.html">Sabra</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="background-color">
+    <div class="content-center">
+        <div class="image-container">
+            <img src="gaza.png" alt="Gaza Strip">
+        </div>
+
+        <h2>We’re Here to Listen — How Are You Feeling?</h2>
+
+       <form onsubmit="return yaz()">
+    -Did you experience a panic attack today? <br>
+    <input type="checkbox" id="panicYes"> yes
+    <input type="checkbox" id="panicNo"> No
+    <span id="panicError" style="color: red;"></span>
+    <span id="panicError" style="color: red;"></span> 
+     <br><br>
+
+    (If yes): <br>
+    • When did it happen? <br>
+    <input type="date" id="panicDate" style="background-color: #c8d5c4;">
+    <span id="dateError" style="color: red;"></span> <br><br>
+
+    • What do you think triggered the panic attack? <br>
+    <input type="checkbox" id="explosion"> Loud explosion <br>
+    <input type="checkbox" id="loss"> Loss of someone <br>
+    <input type="checkbox" id="news"> Sad news <br>
+    Other: <input type="text" id="otherReason" style="background-color: #c8d5c4;">
+    <span id="reasonError" style="color: red;"></span> <br><br>
+     • What symptoms did you experience?
+            <select id="symptoms" style="background-color: #c8d5c4;">
+                <option value="select">select</option>
+                <option value="Rapid heartbeat">Rapid heartbeat</option>
+                <option value="Shortness of breath">Shortness of breath</option>
+                <option value="Excessive sweating">Excessive sweating</option>
+                <option value="Chest pain">Chest pain</option>
+                <option value="Sweating">Sweating</option>
+                <option value="Dizziness">Dizziness</option>
+            </select> <br><br>
+
+    -Would you like to add anything you feel is important? <br>
+    <textarea style="background-color: #c8d5c4; width:50%;">.... </textarea> <br> <br>
+    <input type="submit" style="background-color: #c8d5c4;">
+    <button type="button" onclick="calculateScore()" style="background-color:#c8d5c4;">Calculate My Panic Level</button>
+            <p id="scoreResult" style="color: #4a6741; font-weight: bold;"></p>
+           <div id="leen"><textarea name="" id=""></textarea></div>
+    </div>
+</div>
+
+<script>
+    D = new Date();
+    document.getElementById("dA").innerHTML = D;
+    document.write(D.getDate() + "-" + (D.getMonth() + 1) + "-" + D.getFullYear()); 
+    document.write("" + (D.getHours()) + ":" + D.getMinutes() + ":" + D.getSeconds());
+   function yaz() {
+    var isValid = true;
+
+    var  panicYes = document.getElementById("panicYes").checked;
+    var panicNo = document.getElementById("panicNo").checked;
+    var explosion = document.getElementById("explosion").checked;
+    var loss = document.getElementById("loss").checked;
+    var news = document.getElementById("news").checked;
+
+    if (!panicYes && !panicNo) {
+        document.getElementById("panicError").innerHTML = "Please select yes or no.";
+        isValid = false;
+         document.getElementById("dateError").innerHTML = "Please enter the date.";
+            isValid = false;
+             var otherReason = document.getElementById("otherReason").value;
+             if (!explosion && !loss && !news && otherReason === "") {
+             document.getElementById("reasonError").innerHTML = "Please select or enter at least one reason.";
+             isValid = false;
+             }
+    }
+
+    if (panicYes) {
+        var panicDate = document.getElementById("panicDate").value;
+        if (panicDate === "") {
+            document.getElementById("dateError").innerHTML = "Please enter the date.";
+            isValid = false;
+        }
+        if (!explosion && !loss && !news && other === "") {
+            document.getElementById("reasonError").innerHTML = "Please select or enter at least one reason.";
+            isValid = false;
+        }
+    }
+
+    return isValid;
+}
+        function calculateScore() {
+            let score = 0;
+            var selectedSymptoms = document.getElementById("symptoms").value;
+            
+            switch (selectedSymptoms) {
+                case "Rapid heartbeat":
+                    score += 1;
+                    break;
+                case "Shortness of breath":
+                    score += 2;
+                    break;
+                case "Excessive sweating":
+                    score += 3;
+                    break;
+                case "Chest pain":
+                    score += 4;
+                    break;
+                case "Sweating":
+                    score += 5;
+                    break;
+                case "Dizziness":
+                    score += 6;
+                    break;
+                case "select":
+                    alert("Please select a symptom first!");
+                    return;
+                default:
+                    break;
+            }
+            
+           
+            let result = "";
+            if (score <= 2) {
+                result = "Mild panic symptoms";
+            } else if (score <= 4) {
+                result = "Moderate panic attack";
+            } else {
+                result = "Severe panic attack (please talk to someone you trust)";
+            }
+            
+            document.getElementById("scoreResult").innerText = "Your Panic Score: " + score + " — " + result;
+        }
+  
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
